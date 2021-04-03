@@ -32,9 +32,6 @@ public class TestTask {
                
                case 1: 
                    
-                 //  LocalTime fecha= LocalTime.of();
-                  // LocalTime fech=fecha;
-                   
                    for( i=0 ; i<3;++i){
                    
                   System.out.println(" Ingrese Descripcion ");
@@ -112,13 +109,11 @@ public class TestTask {
                     while( elimina <= i ){
                         
                         if( elimina == i){
-                            
-                            arr[i-1]=null;
                                     
-                          /*  arr[i-1].setdescripcion(null);
+                            arr[i-1].setdescripcion(null);
                             arr[i-1].setestado(false);
                             arr[i-1].setprioridad(0);
-                            arr[i-1].getfecha();*/
+                            arr[i-1].getfecha();
                             marca=1;
                         } 
                         

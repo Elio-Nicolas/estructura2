@@ -15,7 +15,6 @@ public class Task {
        this.descripcion= desc;
        this.estado=est;
        this.prioridad=priori;
-       
        this.fecha=LocalDate.of( año,mes, dia);
        
     }

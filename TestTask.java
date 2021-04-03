@@ -10,7 +10,7 @@ public class TestTask {
 
        Task arr[]= new Task[3];
        int opcion;
-       int prioridad,i,marca=0,elimina;
+       int prioridad,i=0,marca=0,elimina;
        String descripcion;
        Boolean estado;
        int tar;
@@ -36,8 +36,11 @@ public class TestTask {
                    
                   System.out.println(" Ingrese Descripcion ");
                   descripcion=sc.next();
-                  System.out.println(" Ingrese Estado ");
-                  estado=sc.nextBoolean();
+                  do{
+                  System.out.println(" Ingrese Estado  'true' or 'false' ");
+                  estado=sc.nextBoolean(); 
+                  }
+                  while( estado!= true || estado != false );
                   System.out.println(" Ingrese prioridad ");
                   prioridad=sc.nextInt();
                   System.out.println(" Imgrese año");
@@ -54,6 +57,8 @@ public class TestTask {
                 
                case 2:
                    
+                   if(arr[i]!= null){
+                   
                    for( i=0 ; i<3 ; ++i){
                        
                        System.out.println(" descripcion : "+ arr[i].getdescripcion());
@@ -61,10 +66,15 @@ public class TestTask {
                        System.out.println(" Fecha : "+ arr[i].getfecha());
                        System.out.println(" Prioridad : "+arr[i].getprioridad());
                    }
+                   
+                   }else System.out.println(" Lista de tareas vacia");
+                       
                 break; 
                 
                case 3:
                    
+                   if( arr[i]!= null){
+                       
                    for(i=0 ; i<3 ;++i){
                        
                        if( arr[i].getdescripcion()!=null){
@@ -89,11 +99,15 @@ public class TestTask {
                         i++;
                     }
                          
-                     if(marca == 1)System.out.println(" Prioridad modificada");     
+                     if(marca == 1)System.out.println(" Prioridad modificada");
+                     
+                   }else System.out.println(" Lista de tareas vacia");
                    
                break;
                
                case 4:
+                   
+                   if( arr[i]!= null){
                    
                    System.out.println(" Elija tarea que desea eliminar ");
                    
@@ -122,6 +136,8 @@ public class TestTask {
                     
                     if(marca == 1)System.out.println(" Tarea eliminada");
                     
+                   }else System.out.println(" Lista de tareas vacia");
+                   
                  break;
                  
                    }
